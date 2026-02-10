@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>The VisionBlue – Donate</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root {
+    --bg-color: #f7f9fc;
+    --text-color: #222;
+    --primary: #0b4fa3;
+    --primary-dark: #083b78;
+    --card-bg: #ffffff;
+}
+body.dark {
+    --bg-color: #111827;
+    --text-color: #e5e7eb;
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --card-bg: #1f2937;
+}
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+header {
+    background: var(--primary);
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+header img {
+    height: 60px;
+}
+.dark-toggle {
+    background: white;
+    color: var(--primary-dark);
+    border: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+nav {
+    background: var(--primary-dark);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+.menu-toggle {
+    display: none;
+    font-size: 1.4rem;
+    color: white;
+    background: none;
+    border: none;
+}
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: var(--primary-dark);
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 60px;
+        padding: 20px;
+    }
+    .nav-links.show {
+        display: flex;
+    }
+    .menu-toggle {
+        display: block;
+    }
+}
+section {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+h2 {
+    color: var(--primary);
+}
+.card {
+    background: var(--card-bg);
+    padding: 25px;
+    margin: 15px 0;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+.button {
+    background: var(--primary);
+    color: white;
+    padding: 12px 25px;
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+footer {
+    background: var(--primary-dark);
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="header-left">
+        <img src="The VisionBlue LOGO.png" alt="The VisionBlue Logo">
+        <div>
+            <h1>The VisionBlue</h1>
+            <p><em>Through Plight into Light</em></p>
+        </div>
+    </div>
+    <button class="dark-toggle" id="darkToggle">Dark mode</button>
+</header>
+
+<nav>
+    <button class="menu-toggle" id="menuToggle">☰</button>
+    <div class="nav-links" id="navLinks">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#programs">Programs</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="team.html">Team</a>
+        <a href="donate.html">Donate</a>
+        <a href="index.html#impact">Impact</a>
+        <a href="index.html#contact">Contact</a>
+    </div>
+</nav>
+
+<section>
+    <h2>Donate</h2>
+    <p>
+        Your support helps young women and girls move from plight into light. Every contribution—small or large—helps us
+        provide training, mentoring, health support, and opportunities for independence.
+    </p>
+
+    <div class="card">
+        <h3>One-time Donation</h3>
+        <p>Support a girl’s training, a startup grant, or a health and hygiene kit.</p>
+        <a href="#" class="button">Donate via Bank / PayPal (placeholder)</a>
+    </div>
+
+    <div class="card">
+        <h3>Monthly Supporter</h3>
+        <p>Become a monthly supporter and accompany a girl through her entire journey.</p>
+        <a href="#" class="button">Set up Monthly Support (placeholder)</a>
+    </div>
+
+    <div class="card">
+        <h3>Partner With Us</h3>
+        <p>
+            Are you an organization, foundation, or community group? We welcome partnerships for training, grants,
+            and joint projects in Cameroon.
+        </p>
+        <a href="index.html#contact" class="button">Contact Us</a>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 The VisionBlue – Through Plight into Light</p>
+</footer>
+
+<script>
+const menuToggle = document.getElementById('menuToggle');
+const navLinks = document.getElementById('navLinks');
+const darkToggle = document.getElementById('darkToggle');
+
+menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+});
+darkToggle.addEventListener('click', () => {
+    document.body.classList.toggle('
