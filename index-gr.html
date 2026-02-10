@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>The VisionBlue – Von der Not ins Licht</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+/* ---------- FARBEN ---------- */
+:root {
+    --bg-color: #f7f9fc;
+    --text-color: #222;
+    --primary: #0b4fa3;
+    --primary-dark: #083b78;
+    --card-bg: #ffffff;
+}
+body.dark {
+    --bg-color: #111827;
+    --text-color: #e5e7eb;
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --card-bg: #1f2937;
+}
+
+/* ---------- GLOBAL ---------- */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+h2 {
+    color: var(--primary);
+}
+section {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+.card {
+    background: var(--card-bg);
+    padding: 25px;
+    margin: 15px 0;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+/* ---------- HEADER ---------- */
+header {
+    background: var(--primary);
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+header img {
+    height: 60px;
+}
+.dark-toggle {
+    background: white;
+    color: var(--primary-dark);
+    border: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* ---------- NAVIGATION ---------- */
+nav {
+    background: var(--primary-dark);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+.menu-toggle {
+    display: none;
+    font-size: 1.4rem;
+    color: white;
+    background: none;
+    border: none;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: var(--primary-dark);
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 60px;
+        padding: 20px;
+    }
+    .nav-links.show {
+        display: flex;
+    }
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* ---------- HERO ---------- */
+.hero {
+    background: linear-gradient(rgba(11,79,163,0.85), rgba(11,79,163,0.85)), url('hero.jpg');
+    background-size: cover;
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+.button {
+    background: var(--primary);
+    color: white;
+    padding: 12px 25px;
+    display: inline-block;
+    margin: 10px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+/* ---------- GRID ---------- */
+.mission-vision {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+    background: var(--primary-dark);
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="header-left">
+        <img src="The VisionBlue LOGO.png" alt="The VisionBlue Logo">
+        <div>
+            <h1>The VisionBlue</h1>
+            <p><em>Von der Not ins Licht</em></p>
+        </div>
+    </div>
+    <button class="dark-toggle" id="darkToggle">Dunkelmodus</button>
+</header>
+
+<nav>
+    <button class="menu-toggle" id="menuToggle">☰</button>
+
+    <div class="nav-links" id="navLinks">
+        <a href="index-de.html#home">Startseite</a>
+        <a href="index-de.html#about">Über uns</a>
+        <a href="index-de.html#programs">Programme</a>
+        <a href="gallery-de.html">Galerie</a>
+        <a href="team-de.html">Team</a>
+        <a href="donate-de.html">Spenden</a>
+        <a href="index-de.html#impact">Wirkung</a>
+        <a href="index-de.html#contact">Kontakt</a>
+    </div>
+</nav>
+
+<div class="hero" id="home">
+    <h1>Stärkung junger Frauen und Mädchen in Kamerun</h1>
+    <p>Von Verletzlichkeit zu Unabhängigkeit durch Fähigkeiten, Mentoring und Chancen.</p>
+    <a class="button" href="donate-de.html">Ein Mädchen unterstützen</a>
+    <a class="button" href="team-de.html">Partner werden</a>
+</div>
+
+<section>
+    <h2>Wer Wir Sind</h2>
+    <p>
+        The VisionBlue ist eine gemeinnützige Organisation, die 2018 gegründet wurde, um junge Frauen und Mädchen
+        in Kamerun zu unterstützen – insbesondere jene zwischen 15 und 25 Jahren, die mit Armut, Vertreibung,
+        fehlender Bildung und sozialer Ausgrenzung konfrontiert sind.
+    </p>
+</section>
+
+<section id="about">
+    <h2>Mission & Vision</h2>
+    <div class="mission-vision">
+        <div class="card">
+            <h3>Unsere Mission</h3>
+            <p>
+                Junge Frauen und Mädchen von Verletzlichkeit zu Würde zu begleiten – durch Ausbildung,
+                Mentoring, psychosoziale Unterstützung und wirtschaftliche Chancen.
+            </p>
+        </div>
+        <div class="card">
+            <h3>Unsere Vision</h3>
+            <p>
+                Ein Kamerun, in dem jede junge Frau ein Leben in Freiheit, Verantwortung und Solidarität aufbauen kann –
+                und ein Licht für ihre Gemeinschaft wird.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section id="programs">
+    <h2>Unsere Programme</h2>
+
+    <div class="card">
+        <h3>Fähigkeiten & Ausbildung</h3>
+        <p>Praktische Schulungen in IT, Schneiderei, Kosmetik, Kochen, Landwirtschaft und Kleinhandel.</p>
+    </div>
+
+    <div class="card">
+        <h3>Unternehmenszuschüsse</h3>
+        <p>Teilweise rückzahlbare Mikrozuschüsse, um jungen Frauen den Start kleiner Unternehmen zu ermöglichen.</p>
+    </div>
+
+    <div class="card">
+        <h3>Mentoring & Nachbetreuung</h3>
+        <p>Jede Teilnehmerin wird von einer Mentorin begleitet, die sie durch ihren gesamten Weg führt.</p>
+    </div>
+
+    <div class="card">
+        <h3>Gesundheit & Hygiene</h3>
+        <p>Workshops zu Gesundheit, Menstruationshygiene und psychosozialer Unterstützung.</p>
+    </div>
+</section>
+
+<section id="impact">
+    <h2>Unser Wirkungsmodell</h2>
+    <p>
+        Unser „Hilfe zur Hilfe“-Modell sorgt für Nachhaltigkeit: Teilnehmerinnen unterstützen andere Mädchen
+        durch Rückzahlungen, Mentoring und Wissensaustausch.
+    </p>
+</section>
+
+<section id="contact">
+    <h2>Kontakt</h2>
+    <div class="card">
+        <p><strong>E-Mail:</strong> thevisionblue@gmail.com</p>
+        <p><strong>Webseite:</strong> thevisionblue.org</p>
+        <p><strong>Italien:</strong> +39 392 845 6152</p>
+        <p><strong>Deutschland:</strong> +49 1521 4617930</p>
+        <p><strong>Kamerun:</strong> Bamenda & Yaoundé</p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 The VisionBlue – Von der Not ins Licht</p>
+</footer>
+
+<script>
+const menuToggle = document.getElementById('menuToggle');
+const navLinks = document.getElementById('navLinks');
+const darkToggle = document.getElementById('darkToggle');
+
+menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+});
+darkToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+    darkToggle.textContent = document.body.classList.contains('dark') ? 'Hellmodus' : 'Dunkelmodus';
+});
+</script>
+
+</body>
+</html>

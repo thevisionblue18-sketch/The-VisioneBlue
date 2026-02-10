@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>The VisionBlue – Il Nostro Team</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root {
+    --bg-color: #f7f9fc;
+    --text-color: #222;
+    --primary: #0b4fa3;
+    --primary-dark: #083b78;
+    --card-bg: #ffffff;
+}
+body.dark {
+    --bg-color: #111827;
+    --text-color: #e5e7eb;
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --card-bg: #1f2937;
+}
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+header {
+    background: var(--primary);
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+header img {
+    height: 60px;
+}
+.dark-toggle {
+    background: white;
+    color: var(--primary-dark);
+    border: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+nav {
+    background: var(--primary-dark);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+.menu-toggle {
+    display: none;
+    font-size: 1.4rem;
+    color: white;
+    background: none;
+    border: none;
+}
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: var(--primary-dark);
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 60px;
+        padding: 20px;
+    }
+    .nav-links.show {
+        display: flex;
+    }
+    .menu-toggle {
+        display: block;
+    }
+}
+section {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+h2 {
+    color: var(--primary);
+}
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+.card {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 6px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+.card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+.role {
+    font-weight: bold;
+    color: var(--primary-dark);
+}
+footer {
+    background: var(--primary-dark);
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="header-left">
+        <img src="The VisionBlue LOGO.png" alt="Logo The VisionBlue">
+        <div>
+            <h1>The VisionBlue</h1>
+            <p><em>Dalla Difficoltà alla Luce</em></p>
+        </div>
+    </div>
+    <button class="dark-toggle" id="darkToggle">Modalità scura</button>
+</header>
+
+<nav>
+    <button class="menu-toggle" id="menuToggle">☰</button>
+    <div class="nav-links" id="navLinks">
+        <a href="index-it.html#home">Home</a>
+        <a href="index-it.html#about">Chi Siamo</a>
+        <a href="index-it.html#programs">Programmi</a>
+        <a href="gallery-it.html">Galleria</a>
+        <a href="team-it.html">Team</a>
+        <a href="donate-it.html">Dona</a>
+        <a href="index-it.html#impact">Impatto</a>
+        <a href="index-it.html#contact">Contatti</a>
+    </div>
+</nav>
+
+<section>
+    <h2>Il Nostro Team</h2>
+    <p>The VisionBlue è guidata da donne e uomini impegnati, dal Camerun e dalla diaspora.</p>
+
+    <div class="team-grid">
+
+        <div class="card">
+            <img src="team1.jpg" alt="Membro del team 1">
+            <h3>Ms. Maryanne M. Gwaabe</h3>
+            <p class="role">Fondatrice & Direttrice Esecutiva</p>
+            <p>Guida la visione strategica e accompagna le beneficiarie in tutto il Camerun.</p>
+        </div>
+
+        <div class="card">
+            <img src="team2.jpg" alt="Membro del team 2">
+            <h3>Coordinatore dei Programmi</h3>
+            <p class="role">Programmi & Formazione</p>
+            <p>Supervisiona la formazione, il mentoring e il follow-up a Bamenda e Yaoundé.</p>
+        </div>
+
+        <div class="card">
+            <img src="team3.jpg" alt="Membro del team 3">
+            <h3>Responsabile Finanze & Sovvenzioni</h3>
+            <p class="role">Sovvenzioni & Responsabilità</p>
+            <p>Gestisce le sovvenzioni, i rimborsi e il modello “Aiuto per Aiutare”.</p>
+        </div>
+
+        <div class="card">
+            <img src="team4.jpg" alt="Membro del team 4">
+            <h3>Responsabile Supporto Psicosociale</h3>
+            <p class="role">Salute & Benessere</p>
+            <p>Coordina il supporto psicologico, gli incontri sulla salute e l’educazione all’igiene.</p>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 The VisionBlue – Dalla Difficoltà alla Luce</p>
+</footer>
+
+<script>
+const menuToggle = document.getElementById('menuToggle');
+const navLinks = document.getElementById('navLinks');
+const darkToggle = document.getElementById('darkToggle');
+
+menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+});
+darkToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+    darkToggle.textContent = document.body.classList.contains('dark') ? 'Modalità chiara' : 'Modalità scura';
+});
+</script>
+
+</body>
+</html>

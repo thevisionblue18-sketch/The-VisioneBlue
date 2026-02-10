@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>The VisionBlue – Spenden</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root {
+    --bg-color: #f7f9fc;
+    --text-color: #222;
+    --primary: #0b4fa3;
+    --primary-dark: #083b78;
+    --card-bg: #ffffff;
+}
+body.dark {
+    --bg-color: #111827;
+    --text-color: #e5e7eb;
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --card-bg: #1f2937;
+}
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+header {
+    background: var(--primary);
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+header img {
+    height: 60px;
+}
+.dark-toggle {
+    background: white;
+    color: var(--primary-dark);
+    border: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+nav {
+    background: var(--primary-dark);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+.menu-toggle {
+    display: none;
+    font-size: 1.4rem;
+    color: white;
+    background: none;
+    border: none;
+}
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: var(--primary-dark);
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 60px;
+        padding: 20px;
+    }
+    .nav-links.show {
+        display: flex;
+    }
+    .menu-toggle {
+        display: block;
+    }
+}
+section {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+h2 {
+    color: var(--primary);
+}
+.card {
+    background: var(--card-bg);
+    padding: 25px;
+    margin: 15px 0;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+.button {
+    background: var(--primary);
+    color: white;
+    padding: 12px 25px;
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+footer {
+    background: var(--primary-dark);
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="header-left">
+        <img src="The VisionBlue LOGO.png" alt="The VisionBlue Logo">
+        <div>
+            <h1>The VisionBlue</h1>
+            <p><em>Von der Not ins Licht</em></p>
+        </div>
+    </div>
+    <button class="dark-toggle" id="darkToggle">Dunkelmodus</button>
+</header>
+
+<nav>
+    <button class="menu-toggle" id="menuToggle">☰</button>
+    <div class="nav-links" id="navLinks">
+        <a href="index-de.html#home">Startseite</a>
+        <a href="index-de.html#about">Über uns</a>
+        <a href="index-de.html#programs">Programme</a>
+        <a href="gallery-de.html">Galerie</a>
+        <a href="team-de.html">Team</a>
+        <a href="donate-de.html">Spenden</a>
+        <a href="index-de.html#impact">Wirkung</a>
+        <a href="index-de.html#contact">Kontakt</a>
+    </div>
+</nav>
+
+<section>
+    <h2>Spenden</h2>
+    <p>
+        Ihre Unterstützung hilft jungen Frauen und Mädchen, von der Not ins Licht zu gelangen.
+        Jeder Beitrag – ob klein oder groß – ermöglicht uns, Ausbildung, Mentoring, Gesundheitsunterstützung
+        und Chancen zur Selbstständigkeit anzubieten.
+    </p>
+
+    <div class="card">
+        <h3>Einmalige Spende</h3>
+        <p>Unterstützen Sie die Ausbildung eines Mädchens, einen Startzuschuss oder ein Gesundheits- und Hygieneset.</p>
+        <a href="#" class="button">Spenden per Bank / PayPal (Platzhalter)</a>
+    </div>
+
+    <div class="card">
+        <h3>Monatliche Unterstützung</h3>
+        <p>Werden Sie monatlicher Unterstützer und begleiten Sie ein Mädchen auf ihrem gesamten Weg.</p>
+        <a href="#" class="button">Monatliche Spende einrichten (Platzhalter)</a>
+    </div>
+
+    <div class="card">
+        <h3>Partner werden</h3>
+        <p>
+            Sind Sie eine Organisation, Stiftung oder Gemeinschaftsgruppe?
+            Wir freuen uns über Partnerschaften für Schulungen,

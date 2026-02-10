@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>The VisionBlue – Dona</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root {
+    --bg-color: #f7f9fc;
+    --text-color: #222;
+    --primary: #0b4fa3;
+    --primary-dark: #083b78;
+    --card-bg: #ffffff;
+}
+body.dark {
+    --bg-color: #111827;
+    --text-color: #e5e7eb;
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --card-bg: #1f2937;
+}
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+header {
+    background: var(--primary);
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+header img {
+    height: 60px;
+}
+.dark-toggle {
+    background: white;
+    color: var(--primary-dark);
+    border: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+nav {
+    background: var(--primary-dark);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+.menu-toggle {
+    display: none;
+    font-size: 1.4rem;
+    color: white;
+    background: none;
+    border: none;
+}
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: var(--primary-dark);
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 60px;
+        padding: 20px;
+    }
+    .nav-links.show {
+        display: flex;
+    }
+    .menu-toggle {
+        display: block;
+    }
+}
+section {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+h2 {
+    color: var(--primary);
+}
+.card {
+    background: var(--card-bg);
+    padding: 25px;
+    margin: 15px 0;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+.button {
+    background: var(--primary);
+    color: white;
+    padding: 12px 25px;
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+footer {
+    background: var(--primary-dark);
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="header-left">
+        <img src="The VisionBlue LOGO.png" alt="Logo The VisionBlue">
+        <div>
+            <h1>The VisionBlue</h1>
+            <p><em>Dalla Difficoltà alla Luce</em></p>
+        </div>
+    </div>
+    <button class="dark-toggle" id="darkToggle">Modalità scura</button>
+</header>
+
+<nav>
+    <button class="menu-toggle" id="menuToggle">☰</button>
+    <div class="nav-links" id="navLinks">
+        <a href="index-it.html#home">Home</a>
+        <a href="index-it.html#about">Chi Siamo</a>
+        <a href="index-it.html#programs">Programmi</a>
+        <a href="gallery-it.html">Galleria</a>
+        <a href="team-it.html">Team</a>
+        <a href="donate-it.html">Dona</a>
+        <a href="index-it.html#impact">Impatto</a>
+        <a href="index-it.html#contact">Contatti</a>
+    </div>
+</nav>
+
+<section>
+    <h2>Dona</h2>
+    <p>
+        Il tuo sostegno aiuta giovani donne e ragazze a passare dalla difficoltà alla luce.
+        Ogni contributo—piccolo o grande—ci permette di offrire formazione, mentoring, supporto sanitario
+        e opportunità di indipendenza.
+    </p>
+
+    <div class="card">
+        <h3>Donazione Una Tantum</h3>
+        <p>Sostieni la formazione di una ragazza, una sovvenzione iniziale o un kit di salute e igiene.</p>
+        <a href="#" class="button">Dona tramite banca / PayPal (segnaposto)</a>
+    </div>
+
+    <div class="card">
+        <h3>Sostenitore Mensile</h3>
+        <p>Diventa un sostenitore mensile e accompagna una ragazza lungo tutto il suo percorso.</p>
+        <a href="#" class="button">Imposta una donazione mensile (segnaposto)</a>
+    </div>
+
+    <div class="card">
+        <h3>Collabora con Noi</h3>
+        <p>
+            Sei un’organizzazione, una fondazione o un gruppo comunitario?
+            Accogliamo con piacere partnership per formazione, sovvenzioni e progetti congiunti in Camerun.
+        </p>
+        <a href="index-it.html#contact" class="button">Contattaci</a>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 The VisionBlue – Dalla Difficoltà alla Luce</p>
+</footer>
+
+<script>
+const menuToggle = document.getElementById('menuToggle');
+const navLinks = document.getElementById('navLinks');
+const darkToggle = document.getElementById('darkToggle');
+
+menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+});
+darkToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+    darkToggle.textContent = document.body.classList.contains('dark') ? 'Modalità chiara' : 'Modalità scura';
+});
+</script>
+
+</body>
+</html>
